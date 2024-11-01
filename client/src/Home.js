@@ -51,7 +51,7 @@ function Home() {
 
     return () => {
       if (iframe) {
-        window.addEventListener('message', chatLoginOnIframeLoad);
+        window.removeEventListener('message', chatLoginOnIframeLoad);
       }
     };
   }, [iframeUrl]);
